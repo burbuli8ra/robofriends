@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { setSearchField, requestRobots } from '../actions';
+import { setSearchField, requestRobots } from './actions';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundary from '../components/ErrorBoundary';

@@ -3,15 +3,15 @@ import {
 	REQUEST_ROBOTS_PENDING,
 	REQUEST_ROBOTS_SUCCESS,
 	REQUEST_ROBOTS_FAILED
-} from './constants';
-import { apiCall } from "./api/api";
+} from '../constants';
+import { apiCall } from "../api/api";
 
-export const setSearchField = (text) => ({
+const setSearchField = (text) => ({
 	type: CHANGE_SEARCH_FIELD,
 	payload: text
 });
 
-export const requestRobots = () => dispatch => {
+const requestRobots = () => dispatch => {
 	dispatch({ type: REQUEST_ROBOTS_PENDING });
 	apiCall('https://jsonplaceholder.typicode.com/users')
 		.then(data => dispatch({
@@ -23,3 +23,5 @@ export const requestRobots = () => dispatch => {
 			payload: error
 		}));
 };
+
+export { setSearchField, requestRobots };

@@ -15,7 +15,7 @@ const initialRobotsState = {
 	error: ''
 };
 
-export const searchRobots = (state=initialSearchState, action={}) => {
+const searchRobots = (state=initialSearchState, action={}) => {
 	switch(action.type) {
 		case CHANGE_SEARCH_FIELD:
 			// Update state using Object.assign()
@@ -28,7 +28,7 @@ export const searchRobots = (state=initialSearchState, action={}) => {
 	}
 };
 
-export const requestRobots = (state=initialRobotsState, action={}) => {
+const requestRobots = (state=initialRobotsState, action={}) => {
 	switch (action.type) {
 		case REQUEST_ROBOTS_PENDING:
 			return { ...state, isPending: true };
@@ -40,3 +40,5 @@ export const requestRobots = (state=initialRobotsState, action={}) => {
 			return state;
 	}
 };
+
+export { searchRobots, requestRobots };
