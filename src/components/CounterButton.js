@@ -23,6 +23,7 @@ class CounterButton extends Component {
 				className="fw6 pa3 ba br-pill b--green bg-light-green"
 				style={{color: this.props.color}}
 				onClick={this.updateCount}
+				data-test="counter"
 			>
 				Count: {this.state.count}
 			</button>
