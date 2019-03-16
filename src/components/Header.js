@@ -10,7 +10,7 @@ class Header extends Component {
 		return (
 			<Fragment>
 				<h1 className='f1'>RoboFriends</h1>
-				<CounterButton color={'#0ccac4'} />
+				<CounterButton color={'#000000'} />
 			</Fragment>
 		);
 	}
